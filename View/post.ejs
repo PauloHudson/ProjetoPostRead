@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>PostSomething</title>
+</head>
+<style>
+
+    body{
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    margin: 100px auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+#content{
+    color: white;
+    margin-top: 10px;
+    width: 215px;
+    min-height: 100px;
+    margin-bottom: 10px;
+    border-top-left-radius: 10px;
+    border-end-end-radius: 10px;
+    background-color: rgba(27, 25, 25, 0.057);
+    border: 2px solid white;
+}
+.containers{
+    color:  white;
+}
+#content::placeholder{
+    text-align: center;
+    color: white;
+}
+button{
+    background-color: #fd70be;
+    
+
+    color: white;
+    margin: 0 auto;
+    border: 2px solid rgba(255, 255, 255, 0.918);
+    border-top-left-radius: 10px;
+    border-end-end-radius: 10px;
+    padding: 5px;
+    width: 100px;
+    cursor: pointer;
+}
+button:hover{
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0.22);
+}
+.button{
+    display: flex;
+    justify-content: center;
+}
+form{
+    border: 2px solid white;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 7px 9px 12px -6px rgba(0, 0, 0, 0.673);
+}
+
+.inputs{
+    background-color: transparent;
+    margin-top: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    
+}
+.inputs::placeholder{
+    font-size: 10px;
+    position: relative;
+    left: 10px;
+    color: rgba(255, 255, 255, 0.82);
+    text-transform: capitalize;
+
+}
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    background-color: transparent;
+}
+#botao{
+    background-color: transparent;
+    border: 2px solid white;
+    border-top-left-radius: 10px;
+    border-end-end-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    font-size: 20px;
+    color: black;
+    background-color: rgba(180, 43, 185, 0.701);
+    color: white;
+}
+</style>
+
+<body>
+    <main>
+        <!-- titulo, texto, conteudo -->
+        <form action="/post" method="POST">
+            <div class="containers">
+                Title: <input type="text" name="title" placeholder="Type the title" class="inputs">
+            </div>
+            <div class="containers">
+                Text: <input type="text" name="text" placeholder="Type your text" class="inputs">
+            </div>
+            <div class="containers">
+                <input type="text" name="content" placeholder="Content here" id="content">
+            </div>
+            <div class="button">
+                <button type="submit" value="Submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <div class="button">
+        <a href="http://localhost:3000/blog" id="botao">POSTS</a>
+    </div>
+</body>
+</html> 
