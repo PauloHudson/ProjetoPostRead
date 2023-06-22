@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 // Rota para criar um novo post
 
 // Conectar ao MongoDB
-const uri = 'mongodb+srv://Paulohudson:789paulo@cluster0.lsgbirw.mongodb.net/?retryWrites=true&w=majority';
+
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Conectado ao MongoDB');
